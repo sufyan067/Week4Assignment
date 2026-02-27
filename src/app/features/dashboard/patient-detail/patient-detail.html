@@ -1,0 +1,23 @@
+<div class="detail">
+  <div class="list-style">
+
+    <app-patient-list></app-patient-list>
+  </div>
+  <div>
+    <div class="detailing">
+      <h2>Patient Detail</h2>
+      @if (patient()) {
+      <p><b>Id:</b> {{ patient()!.id }}</p>
+      <p><b>Name:</b> {{ patient()!.name }}</p>
+      <p><b>Address:</b> {{ patient()!.address }}</p>
+      <p><b>CheckedAt:</b> {{ patient()!.checkedAt }}</p>
+
+      } @else {
+      <p>Select a patient to see details</p>
+      }
+    </div>
+
+  </div>
+
+
+</div>

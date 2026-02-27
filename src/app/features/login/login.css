@@ -1,0 +1,20 @@
+.card {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+  background: #fff;
+  font-family: system-ui, Arial;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+label { display: block; margin: 12px 0; font-weight: 600; }
+input { width: 97%; padding: 10px; margin-top: 6px; border-radius: 10px; border: 1px solid #ddd; }
+button { margin-top: 14px; padding: 10px 14px; border-radius: 10px; border: none; cursor: pointer; font-weight: 700; }
+.error { color: #b42318; margin-top: 10px; }

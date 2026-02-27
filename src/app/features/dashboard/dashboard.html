@@ -1,0 +1,23 @@
+<div class="dashboard-layout">
+  <header class="header">
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+    <p>You are logged in</p>
+    <div>
+      <a routerLink="/login" (click)="logout()">Logout</a>
+    </div>
+  </header>
+  <div class="left-bar">
+    <a routerLink="patient-registration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Go to
+      Patient Registration</a>
+    <a routerLink="patient-detail" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Patient
+      Details</a>
+  </div>
+  <div class="dashboard-main card">
+    <!-- Child page gets its own space -->
+    <div class="dashboard-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

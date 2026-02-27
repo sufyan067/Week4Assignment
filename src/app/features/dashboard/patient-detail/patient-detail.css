@@ -1,0 +1,15 @@
+.detail{
+    background-color:  #1ea3e58d;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    width: 99%;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+.detailing{
+    padding-left: 40px;
+}

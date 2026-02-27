@@ -1,0 +1,16 @@
+<div class="main">
+    <h2 id="patient-list">Patient List</h2>
+    @for (patient of patients; track patient.id) {
+    <ul>
+        <li (click)="selectPatient(patient) " class="main-list">
+            {{patient.name}}
+        </li>
+    </ul>
+
+    }
+</div>
+
+
+
+
+<!-- PatientList updates the selected patient and PatientDetail reacts to it using signal -->

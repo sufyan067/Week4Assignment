@@ -1,0 +1,99 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #f6f7f9;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1f2328;
+  background-color: bisque;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: bisque;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: #eaf2ff;
+  color: #1f6feb;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.login-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #1f6feb;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background-color: burlywood;
+}
+
+.hero {
+  width: min(560px, 100%);
+  background: bisque;
+  border: 1px solid #e6e8eb;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 10px 0 18px;
+  color: #606a75;
+  line-height: 1.45;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #1f6feb;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #1b63d4;
+}
+
+.footer {
+  padding: 12px 18px;
+  text-align: center;
+  color: #606a75;
+}

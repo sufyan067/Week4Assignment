@@ -1,0 +1,83 @@
+<div class="card">
+  <h2>Patient Registration</h2>
+
+  <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+
+    <!-- Full Name -->
+    <label>Full Name</label>
+    <input type="text" formControlName="fullName" />
+    @if (hasError('fullName', 'pattern')) {<p class="error">Only text allowed</p> }
+    @else if (hasError('fullName', 'minlength')) {<p class="error">minimum 3 character required</p> }
+    @else if (hasError('fullName', 'required')) {<p class="error">Name is required</p> }
+
+    <!--
+    @if (getFullNameError()) {
+    <p class="error">{{ getFullNameError() }}</p>
+    }
+    -->
+
+
+    <!-- Email -->
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+    @if (isInvalid('email')) {
+    <p class="error">Enter a valid email address.</p>
+    }
+
+    <!-- Age -->
+    <label>Age</label>
+    <input formControlName="age" appNumericOnly />
+    @if (hasError('age', 'min')) {
+    <p class="error">Patient must be at least 18 years old.</p>
+    }
+    @else if (hasError('age', 'required')) {
+    <p class="error">Age is required</p>
+    }
+
+    <!-- Diseases (FormArray) -->
+    <label>Diseases</label>
+
+    <div formArrayName="diseases">
+      @for (control of diseases.controls; track $index; let i = $index) {
+
+      <div>
+        <input type="text" [formControlName]="i" />
+
+        <button class="removeDisease" type="button" (click)="removeDisease(i)">
+          Remove
+        </button>
+
+        @if (hasError('diseases.' + i, 'pattern')) {
+        <p class="error">Only letters are allowed.</p>
+        }
+        @else if (hasError('diseases.' + i, 'required')) {
+        <p class="error">Disease is required.</p>
+        }
+      </div>
+
+      }
+    </div>
+
+    <button class="addDisease" type="button" (click)="addDisease()">
+      Add Disease
+    </button>
+
+    <!-- Phone -->
+    <label>Phone Number</label>
+    <input formControlName="phone" appNumericOnly />
+    @if (isInvalid('phone')) {
+    <p class="error">Phone number must be at least 10 digits.</p>
+    }
+
+    <div class="buttons">
+      <button type="submit" [disabled]="patientForm.invalid">
+        Register
+      </button>
+
+      <button type="button" (click)="onReset()">
+        Reset
+      </button>
+    </div>
+
+  </form>
+</div>   

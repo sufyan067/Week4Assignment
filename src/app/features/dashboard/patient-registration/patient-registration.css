@@ -1,0 +1,51 @@
+.card {
+  max-width: 99%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #0b97dc8d;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-family: system-ui;
+  
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input {
+  width: 50%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.error {
+  color: #ed1000;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.addDisease{
+  margin-top: 5px;
+}
+.removeDisease{
+  margin-left: 5px;
+}
