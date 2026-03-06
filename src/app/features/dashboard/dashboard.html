@@ -11,13 +11,14 @@
   <div class="left-bar">
     <a routerLink="patient-registration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Go to
       Patient Registration</a>
-    <a routerLink="patient-detail" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Patient
-      Details</a>
+    <a routerLink="registered-patient" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Registered Patients</a>
+    <a routerLink="patient-detail" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Patient Details</a>
   </div>
   <div class="dashboard-main card">
     <!-- Child page gets its own space -->
     <div class="dashboard-content">
       <router-outlet></router-outlet>
     </div>
+   
   </div>
 </div>

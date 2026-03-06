@@ -80,8 +80,16 @@ export class PatientRegistrationComponent {
 
   onSubmit() {
     if (this.patientForm.valid) {
-      console.log('Patient Data:', this.patientForm.value);
-      this.router.navigateByUrl('/dashboard');
+      const formData = this.patientForm.value;
+      console.log('Patient Data:', formData);
+      const existing = localStorage.getItem('patients');
+      let patients = [];
+      if (existing) {
+        patients = JSON.parse(existing);
+      }
+      patients.push(formData);
+      localStorage.setItem('patients', JSON.stringify(patients));
+      this.router.navigateByUrl('/dashboard/registered-patient');
     }
   }
 

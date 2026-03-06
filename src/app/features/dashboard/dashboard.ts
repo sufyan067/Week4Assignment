@@ -5,15 +5,17 @@ import { AuthService } from '../../core/auth.service';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterLink,RouterLinkActive,RouterOutlet],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
 export class DashboardComponent {
-    isLoggingOut = false;
+  isLoggingOut = false;
+ 
 
-  constructor(private auth: AuthService, private router: Router) {}
-  
+  constructor(private auth: AuthService, private router: Router) { }
+
+
 
   logout() {
     this.isLoggingOut = true;

@@ -1,0 +1,59 @@
+.patient-list-card {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #b2d7ee;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.patient-table th {
+  background: #4bb4e5;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: left;
+}
+
+.patient-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.disease-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  padding: 4px 8px;
+  border-radius: 15px;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #0369a1;
+}
+
+.clear-btn {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.delete-btn {
+  padding: 6px 12px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: #ea580c;
+}

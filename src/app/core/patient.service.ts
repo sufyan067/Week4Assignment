@@ -15,7 +15,7 @@ export class PatientService {
   private patients: patientUser[] = [
     {
       id: 1,
-      name: 'Ahmad Khan',
+      name: 'Mr. Khan',
       address: 'Street # 09',
       checkedAt: new Date()
     },
@@ -35,7 +35,7 @@ export class PatientService {
     },
     {
       id: 4,
-      name: 'Usama Qadeer',
+      name: 'Saad Ali',
       address: 'Street # 15',
       checkedAt: new Date()
 

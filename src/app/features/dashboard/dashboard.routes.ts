@@ -12,6 +12,10 @@ export const DASHBOARD_ROUTES: Routes = [
         loadComponent:()=>
           import('./patient-registration/patient-registration').then(m=>m.PatientRegistrationComponent)
       },
+       {path: 'registered-patient',
+        loadComponent:()=>
+          import('./registered-patient/registered-patient').then(m=>m.RegisteredPatient)
+      },
       {path: 'patient-detail',
         loadComponent:()=>
           import('./patient-detail/patient-detail').then(m=>m.PatientDetail)

@@ -1,0 +1,52 @@
+@if (patients.length > 0) {
+
+<div class="patient-list-card">
+
+    <h2>Registered Patients</h2>
+
+    <table class="patient-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Diseases</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (p of patients; track $index; let i=$index) {
+            <tr>
+                <td>{{ p.fullName }}</td>
+                <td>{{ p.email }}</td>
+                <td>{{ p.age }}</td>
+                <td>{{ p.phone }}</td>
+                <td>
+                    @for (d of p.diseases; track $index; ) {
+                    <span class="disease-badge">{{ d }}</span>
+                    }
+                </td>
+                <td>
+                    <button class="delete-btn" (click)="deletePatient(i)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <button class="clear-btn" (click)="clearAll()">
+        Clear All
+    </button>
+
+</div>
+
+}
+@else {
+<p>No registered patients yet.</p>
+}

@@ -4,8 +4,8 @@ import { Injectable, signal } from '@angular/core';
 export class AuthService {
   private loggedIn = signal(false);
   private allowed = [
-    { username: 'Ahmad Ali', password:   'Ahmad@123' },
-    { username: 'Bilal Talha', password: 'Bilal@123' }
+    { username: 'Admin', password:   'Admin@123' }
+
   ];
 
   isLoggedIn() {
